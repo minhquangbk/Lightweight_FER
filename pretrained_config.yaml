@@ -1,0 +1,20 @@
+model:
+  root: ./models/hub
+  weight: 
+  name: resnet
+  pretrained: True # fine-tune
+  loss:
+  freeze_layers: all
+dataset:
+  root: /kaggle/working/
+  name: fer2013
+hyperparams:
+  bs: 64
+  lr: 0.001
+  epochs: 300
+  optimizer: Adam
+  target_size: 224
+  image_channels: 3
+  scheduler: cosine
+  save_freq: 50
+
