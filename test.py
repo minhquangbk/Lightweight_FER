@@ -1,4 +1,4 @@
-from code_base.models.hub.fgw import Model
+from models.hub.fgw import Model
 
 def count_parameters(model): 
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
